@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header';
+import Index from './components/AllPages/Index/Index';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import './App.scss';
+import Page1 from './components/AllPages/Page1/Page1';
+import Page2 from './components/AllPages/Page2/Page2';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+            <Route exact path="/">
+              <Index />
+            </Route>
+            <Route exact path="/cactus" component={Page1} />
+            <Route exact path="/orquideas" component={Page2} />
+          </Switch>
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 

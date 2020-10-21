@@ -1,0 +1,36 @@
+.main-header {
+    margin: 0;
+    background-color: #512da8;
+    box-shadow: 0 0 15px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px;
+    height: 60px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    align-items: center;
+    h1 {
+        margin: 0;
+    }
+    nav {
+        margin-right: 60px;
+        a {
+            cursor: pointer;
+            transition: all 0.2s linear;
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            padding-left: 20px;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+    
+
+}
